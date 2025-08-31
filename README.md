@@ -43,11 +43,21 @@ By creating **two distinct DNS records** for subdomains—one that resolves excl
     * Host `ip.php` on an IPv6-only subdomain (e.g., `ipv6.example.com`).
     * Host `public.php` on your main domain (e.g., `www.example.com`).
 
-3.  **Update `public.php`**: Open `public.php` and replace the placeholder URLs with your actual subdomain URLs.
+3. **Update `ip.php`**: Open `ip.php` and update the Access-Control-Allow-Origin header.
+   ```PHP
+   // The Access-Control-Allow-Origin header should contain an * to allow any remote domain
+   // or the URL of your primary domain where public.ip is.
+   // header("Access-Control-Allow-Origin: *");
+   //                or
+   // header("Access-Control-Allow-Origin: https://www.yourdomain.com");
+   header("Access-Control-Allow-Origin: https://www.example.com");
+   ```
+
+4.  **Update `public.php`**: Open `public.php` and replace the placeholder URLs with your actual subdomain URLs.
     ```javascript
     // Update these URLs to your live subdomains
     const ipv4addr = '[https://ipv4.example.com/ip.php](https://ipv4.example.com/ip.php)';
     const ipv6addr = '[https://ipv6.example.com/ip.php](https://ipv6.example.com/ip.php)';
     ```
 
-4.  **Test the setup:** Navigate to `https://www.example.com/public.php` in a web browser to see your public IP addresses.
+5.  **Test the setup:** Navigate to `https://www.example.com/public.php` in a web browser to see your public IP addresses.
