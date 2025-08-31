@@ -1,4 +1,4 @@
-# Dual-Stack IP Checker
+# Dual-Stack Public IP Checker
 
 This project provides a simple way to determine a client's public IPv4 and IPv6 addresses using a dual-stack setup. It consists of two main files: `ip.php` and `public.php`. The core principle is to use separate subdomains for IPv4 and IPv6-only requests, as a single request cannot simultaneously see both IP types.
 
@@ -6,11 +6,11 @@ This project provides a simple way to determine a client's public IPv4 and IPv6 
 
 ### ⚙️ How It Works
 
-1.  **`ip.php`**: This is a very simple PHP script designed to be hosted on two separate subdomains. It does one thing: it returns the **IP address** of the requesting client.
+1.  **`ip.php`**: This is a very simple PHP script designed to be hosted on two separate subdomains. It does one thing: it returns the IP address of the requesting client.
     * On the **IPv4-only subdomain** (e.g., `ipv4.example.com`), it returns the public IPv4 address.
     * On the **IPv6-only subdomain** (e.g., `ipv6.example.com`), it returns the public IPv6 address.
 
-2.  **`public.php`**: This is the client-facing script hosted on your main domain (e.g., `www.example.com`). It uses **jQuery's `$.get()` method** to make two separate asynchronous requests:
+2.  **`public.php`**: This is the client-facing script hosted on your main domain (e.g., `www.example.com`). It uses jQuery's `$.get()` method to make two separate asynchronous requests:
     * One request to the `ipv4.example.com` subdomain.
     * One request to the `ipv6.example.com` subdomain.
 
