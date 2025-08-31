@@ -22,12 +22,12 @@ This project provides a simple way to determine a client's public IPv4 and IPv6 
 
 The use of separate subdomains is **critical** to this project's functionality. This is due to a fundamental limitation of how internet requests are routed.
 
-When a client's device makes a request to a server, it uses either an **IPv4 address or an IPv6 address, but not both at the same time.** A single request is a single stream of data between two endpoints.
+When a client's device makes a request to a server, it uses either an IPv4 address or an IPv6 address, but not both at the same time. A single request is a single stream of data between two endpoints.
 
 * If a client has a working IPv6 connection and your server has an IPv6 address, the request will be made over IPv6. The server will only see the client's IPv6 address.
 * Similarly, if the request is made over IPv4, the server will only see the client's IPv4 address.
 
-By creating **two distinct DNS records** for subdomains—one that resolves exclusively to an **IPv4 address** and another that resolves exclusively to an **IPv6 address**—we force the client's device to use a specific protocol for each request. This allows us to reliably capture both addresses and present them to the user.
+By creating two distinct DNS records for subdomains—one that resolves exclusively to an IPv4 address and another that resolves exclusively to an IPv6 address—we force the client's device to use a specific protocol for each request. This allows us to reliably capture both addresses and present them to the user.
 
 ***
 
