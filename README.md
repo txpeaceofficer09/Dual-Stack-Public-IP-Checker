@@ -35,7 +35,7 @@ By creating two distinct DNS records for subdomains—one that resolves exclusiv
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/txpeaceofficer09/Public-IP.git](https://github.com/txpeaceofficer09/Public-IP.git)
+    git clone [https://github.com/txpeaceofficer09/Dual-Stack-Public-IP-Checker.git](https://github.com/txpeaceofficer09/Dual-Stack-Public-IP-Checker.git)
     ```
 
 2.  **Configure your subdomains:**
