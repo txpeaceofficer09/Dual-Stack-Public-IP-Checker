@@ -56,8 +56,8 @@ By creating two distinct DNS records for subdomains—one that resolves exclusiv
 4.  **Update `public.php`**: Open `public.php` and replace the placeholder URLs with your actual subdomain URLs.
     ```javascript
     // Update these URLs to your live subdomains
-    const ipv4addr = '[https://ipv4.example.com/ip.php](https://ipv4.example.com/ip.php)';
-    const ipv6addr = '[https://ipv6.example.com/ip.php](https://ipv6.example.com/ip.php)';
+    const ipv4addr = 'https://ipv4.example.com/ip.php';
+    const ipv6addr = 'https://ipv6.example.com/ip.php';
     ```
 
 5.  **Test the setup:** Navigate to `https://www.example.com/public.php` in a web browser to see your public IP addresses.
